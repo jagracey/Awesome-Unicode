@@ -10,6 +10,41 @@
 *Please read the [contribution guidelines](CONTRIBUTING.md) before contributing.*
 *Key Unicode terminology is defined in the [glossary](GLOSSARY.md).*
 
+<br><br>
+
+## Table of Contents
+
+- [Awesome Unicode ](#awesome-unicode)
+- [Quick Unicode Background](#quick-unicode-background)
+	- [What Characters Does the Unicode Standard Include?](#what-characters-does-the-unicode-standard-include)
+	- [Unicode Character Encodings](#unicode-character-encodings)
+	- [Lets talk Numbers](#lets-talk-numbers)
+	- [UTF-16 Surrogate Pairs](#utf-16-surrogate-pairs)
+	- [Calculating Surrogate Pairs](#calculating-surrogate-pairs)
+	- [Composing & Decomposing](#composing--decomposing)
+	- [Myths of Unicode](#myths-of-unicode)
+	- [Applied Unicode Encodings](#applied-unicode-encodings)
+	- [Source Code](#source-code)
+- [Awesome Characters List](#awesome-characters-list)
+	- [Characters](#characters)
+	- [modifiers](#modifiers)
+- [Quirks and Troubleshooting](#quirks-and-troubleshooting)
+	- [List of Characters with One-To-Many Case Mappings](#list-of-characters-with-one-to-many-case-mappings)
+- [Awesome Packages & Libraries](#awesome-packages-&-libraries)
+- [Emojis](#emojis)
+	- [Diversity](#diversity)
+- [Creatively Naming Variables and Methods](#creatively-naming-variables-and-methods)
+- [Unicode Fonts](#unicode-fonts)
+- [More Reading](#more-reading)
+- [Exploring Deeper into Unicode Yourself](#exploring-deeper-into-unicode-yourself)
+- [Overview Map](#overview-map)
+	- [A map of the Basic Multilingual Plane](#a-map-of-the-basic-multilingual-plane)
+	- [Unicode Blocks](#unicode-blocks)
+- [Principles of the Unicode Standard](#principles-of-the-unicode-standard)
+- [Unicode Versions](#unicode-versions)
+- [Contributing](#contributing)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
 
 
 # Quick Unicode Background
@@ -255,7 +290,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-### List of Characters with One-To-Many Case Mappings
+## List of Characters with One-To-Many Case Mappings
 *Most of the below characters express their one-to-many mappings when uppercased.*
 
 | Code Point                                      | Character | Name                                                                     | Mapped Character | Mapped Code Points     |
@@ -369,7 +404,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-# Awesome Packages & Libraries:
+# Awesome Packages & Libraries
 - [PhantomScript](https://github.com/jagracey/PhantomScript) - :ghost: :flashlight: Invisible JavaScript code execution & social engineering
 - [ES Reverser](https://github.com/mathiasbynens/esrever) - A Unicode-aware string reverser written in JavaScript.
 - Cool Method and Variable names?
@@ -523,7 +558,7 @@ var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠�
 
 
 # Overview Map
-## A map of the Basic Multilingual Plane.
+## A map of the Basic Multilingual Plane
 **Each numbered box represents 256 code points.**
 <center>
 ![A map of the Basic Multilingual Plane. Each numbered box represents 256 code points.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Roadmap_to_Unicode_BMP.svg/750px-Roadmap_to_Unicode_BMP.svg.png)
