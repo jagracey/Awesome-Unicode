@@ -12,7 +12,6 @@
 
 
 
-
 # Quick Unicode Background
 
 ## What Characters Does the Unicode Standard Include?
@@ -27,7 +26,7 @@ The Unicode Standard also reserves code points for private use. Vendors or end u
 
 
 
-## Encoding Forms
+## Unicode Character Encodings
 
 Character encoding standards define not only the identity of each character and its numeric value, or code point, but also how this value is represented in bits.
 
@@ -155,7 +154,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-## Encodings
+## Applied Unicode Encodings
 
 
 | Encoding Type 			|  Raw Encoding							|
@@ -190,30 +189,34 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-## Awesome Characters List
+# Awesome Characters List
 
-#### Characters
+## Characters
+
+
+| Char     | Name                                     | Description                                                                                                                                                                                    |
+|----------|------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `'﻿'`    | U+FEFF (Byte Order Mark - BOM)           | has the important property of unambiguity on byte reorder. It is also zerowidth, and invisible. In non-complying software (like the PHP interpreter) this leads to all sorts of fun behaviour. |
+| `'￯'`    | '\\uFFEF' Reversed Byte Order Mark (BOM) | does not equate to a legal character, other than the beginning of text.                                                                                                                        |
+| `'​'`    | '\\u200B' zero-width non-break space     | (a character with no appearance and no effect other than preventing the formation of ligatures).                                                                                               |
+| `' '`    | U+00A0 NO-BREAK SPACE                    | force adjacent characters to stick together. Well known as   in HTML.                                                                                                                          |
+| `'­'`    | U+00AD SOFT HYPHEN                       | (in HTML: ­) like ZERO WIDTH SPACE, but show a hyphen if (and only if) a break occurs.                                                                                                         |
+| `'‍'`    | U+200D ZERO WIDTH JOINER                 | force adjacent characters to be joined together (e.g., arabic characters or supported emoji). Can be used this to compose sequentially combined emoji.                                         |
+| `'⁠'`    | U+2060 WORD JOINER                       | the same as U+00A0, but completely invisible. Good for writing @font-face on Twitter.                                                                                                          |
+| `' '`    | U+1680 OGHAM SPACE MARK                  | a space that looks like a dash. Great to bring programmers close to madness: 1 +  2 === 3.                                                                                                     |
+| `';'`    | U+037E GREEK QUESTION MARK               | a look-alike to the semicolon. Also a fun way to annoy developers.                                                                                                                             |
+| `'‭'`    | U+202D                                   | change the text direction to Left-to-Right.                                                                                                                                                    |
+| `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-Left. Relevant XKCD:                                                                                                                                     |
 
 
 
-| Char | Name                            | Description                                                                                         |
-|--|------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| `'﻿'` | U+FEFF (Byte Order Mark - BOM)           | has the important property of unambiguity on byte reorder. It is also zerowidth, and invisible.  In non-complying software (like the PHP interpreter) this leads to all sorts of fun behaviour. |
-| `'￯'` | '\uFFEF'  Reversed Byte Order Mark (BOM) | does not equate to a legal character, other than the beginning of text.                             |
-| `'​'` | '\u200B' zero-width non-break space      | (a character with no appearance and no effect other than preventing the formation of ligatures).    |
-| `' '` | U+00A0 NO-BREAK SPACE                    | force adjacent characters to stick together. Well known as &nbsp; in HTML.                          |
-| `'­'` | U+00AD SOFT HYPHEN                       | (in HTML: &shy;) like ZERO WIDTH SPACE, but show a hyphen if (and only if) a break occurs.          |
-| `'‍'` | U+200D ZERO WIDTH JOINER                 | force adjacent characters to be joined together (e.g., arabic characters or supported emoji). Can be used this to compose sequentially combined emoji. |
-| `'⁠'` | U+2060 WORD JOINER                       | the same as U+00A0, but completely invisible. Good for writing @font-face on Twitter.               |
-| `' '` | U+1680 OGHAM SPACE MARK                  | a space that looks like a dash. Great to bring programmers close to madness: 1 +  2 === 3.          |
-| `';'` | U+037E GREEK QUESTION MARK               | a look-alike to the semicolon. Also a fun way to annoy developers.                                  |
-|`'‭'`  | U+202D                        | change the text direction to Left-to-Right.                                                           |
-| `'‮'`‭ ‭| U+202E                        | change the text direction to Right-to-Left. Relevant XKCD:                                                           |
+
+
 <center>
 [![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
 </center>
 
-#### modifiers
+## modifiers
 
 ```javascript
 > 'a'
@@ -238,7 +241,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-## Quirks and Troubleshooting
+# Quirks and Troubleshooting
 
 - **String length is typically determined by counting codepoints.** This means that surrogate pairs would count as two characters. Combining multiple diacritics may be stacked over the same character. `a + ̈  == ̈a   `, increasing length, while only producing a single character.
 
@@ -366,14 +369,14 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 
-## Awesome Packages & Libraries:
+# Awesome Packages & Libraries:
 - [PhantomScript](https://github.com/jagracey/PhantomScript) - :ghost: :flashlight: Invisible JavaScript code execution & social engineering
 - [ES Reverser](https://github.com/mathiasbynens/esrever) - A Unicode-aware string reverser written in JavaScript.
 - Cool Method and Variable names?
 - Unicode and Domain Names
 
 
-## EMOJIS
+# Emojis
 * [Unicode Consortium's Emoji Chart](http://www.unicode.org/emoji/charts/full-emoji-list.html)
 * [Emojipedia](http://emojipedia.org/) - Information about specific emoji, news blog.
 * [emojitracker](http://emojitracker.com/) - Realtime emoji use on Twitter.
@@ -382,7 +385,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 * [How to register an emoji URL](http://www.name.com/blog/how-tos/2015/12/want-an-emoji-url-this-is-how-you-register-one/)
 
 
-### Diversity
+## Diversity
 
 The Unicode Consortium has made a huge effort better reflect and incorporate human diversity, including cultural practices. Here is the Consortium's [diversity report](http://unicode.org/reports/tr51/#Diversity).
 
@@ -401,15 +404,14 @@ Further, emojis now support skin color modifiers.
 
 
 
-<center>
-| Code | Name | Samples |
-|------|------|---------|
+| Code    | Name                                | Samples                                                                                                                                                                                                            |
+|---------|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | U+1F3FB | EMOJI MODIFIER FITZPATRICK TYPE-1-2 | <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-1-2.png" height="20" width="20"> <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-1-2-bw.png" height="20" width="20"> |
 | U+1F3FC | EMOJI MODIFIER FITZPATRICK TYPE-3   | <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-3.png"   height="20" width="20"> <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-3-bw.png"   height="20" width="20"> |
 | U+1F3FD | EMOJI MODIFIER FITZPATRICK TYPE-4   | <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-4.png"   height="20" width="20"> <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-4-bw.png"   height="20" width="20"> |
 | U+1F3FE | EMOJI MODIFIER FITZPATRICK TYPE-5   | <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-5.png"   height="20" width="20"> <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-5-bw.png"   height="20" width="20"> |
 | U+1F3FF | EMOJI MODIFIER FITZPATRICK TYPE-6   | <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-6.png"   height="20" width="20"> <img src="http://www.unicode.org/reports/tr51/images/other/swatch-type-6-bw.png"   height="20" width="20"> |
-</center>
+
 
 
 Just follow the desired Emoji with one of the skin color modifiers `\u{1F466}\u{1F3FE}`.
@@ -431,7 +433,7 @@ Just follow the desired Emoji with one of the skin color modifiers `\u{1F466}\u{
 
 
 
-## Creatively Naming Variables and Methods
+# Creatively Naming Variables and Methods
 *Examples are written in JavaScript (ES6)*
 
 In general, characters designated the [ID_START](https://codepoints.net/search?IDS=1) property may be used at the beggining of a variable name. Characters designated with the [ID_CONTINUE](https://codepoints.net/search?IDC=1) property may be used after the first character of a variable.
@@ -493,13 +495,13 @@ var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠�
 
 
 
-## Unicode Fonts
+# Unicode Fonts
 *A single TrueType / OpenType font format cannot cover all UTF-8 characters as there is a hard limit of 65535 glyphs in a font. Since there are over 1.1 million UTF-8 glphys, you will need to use a font-family to cover them all.*
 - https://en.wikipedia.org/wiki/Unicode_font#List_of_Unicode_fonts
 - http://www.unifont.org/fontguide/
 
 
-## More Reading
+# More Reading
 * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](http://www.joelonsoftware.com/articles/Unicode.html) - By Joel Spolsky
 * [The Unicode Consortium's Recommended Reading List](http://www.unicode.org/resources/readinglist.html)
 * [Space Yourself](https://www.smashingmagazine.com/2015/10/space-yourself/) - Smashing Magazine's Spacing Guide
@@ -507,7 +509,7 @@ var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠�
 * [Creative usernames and Spotify account hijacking](https://labs.spotify.com/2013/06/18/creative-usernames/)
 
 
-## Exploring Deeper into Unicode Yourself
+# Exploring Deeper into Unicode Yourself
 - [Confusable Unicode Characters](http://unicode.org/cldr/utility/confusables.jsp?r=None)
 - [Unicode Character Database](http://www.unicode.org/ucd/)
 - [Database Dumps of Codepoints.net](https://dumps.codepoints.net/)
@@ -520,15 +522,16 @@ var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠�
 
 
 
-## Overview Map
-### A map of the Basic Multilingual Plane. Each numbered box represents 256 code points.
+# Overview Map
+## A map of the Basic Multilingual Plane.
+**Each numbered box represents 256 code points.**
 <center>
 ![A map of the Basic Multilingual Plane. Each numbered box represents 256 code points.](https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Roadmap_to_Unicode_BMP.svg/750px-Roadmap_to_Unicode_BMP.svg.png)
 </center>
 *The Chinese, Japanese and Korean (CJK) scripts share a common background, collectively known as CJK characters. In the process called Han unification, the common (shared) characters were identified and named "CJK Unified Ideographs".*
 
 
-### Unicode Blocks
+## Unicode Blocks
 *The Unicode standard arranges groups of characters together in blocks. This is the complete list of blocks across all 17 planes.*
 
 | Name                                           | From     | To       | \# Codepoints |
@@ -798,7 +801,7 @@ var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠�
 
 
 
-## [Principles of the Unicode Standard](http://www.unicode.org/standard/principles.html)
+# [Principles of the Unicode Standard](http://www.unicode.org/standard/principles.html)
 
 
 The Unicode Standard set forth the following fundamental principles:
@@ -818,7 +821,7 @@ Note: Principle descriptions are from [codepoints.net](https://codepoints.net/ab
 
 
 
-## Unicode Versions/Change Log
+# Unicode Versions
 * [Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) (Latest Version as of 01/01/2016)
 * [Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/)
 * [Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)
@@ -834,15 +837,15 @@ Note: Principle descriptions are from [codepoints.net](https://codepoints.net/ab
 
 
 
-<br><br><br><br>
+<br><br>
 
 
-## Contributing
+# Contributing
 
-See the [contribution guide](CONTRIBUTING.md) for details.
+See the *Awesome Unicode* [contribution guide](CONTRIBUTING.md) for details on how to contribute.
 
 
-## Code of Conduct
+# Code of Conduct
 
 See the [Code of Conduct](CODE-OF-CONDUCT.md) for details. Basically it comes down to:
 >In the interest of fostering an open and welcoming environment, we as
@@ -852,7 +855,7 @@ size, disability, ethnicity, gender identity and expression, level of experience
 nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 
-## License
+# License
 
 [![CC0](https://i.creativecommons.org/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
