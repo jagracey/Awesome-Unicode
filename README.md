@@ -107,13 +107,6 @@ The Unicode characterset is divided into 17 core segments called "planes", which
 The first plane is called the Basic Multilingual Plane or BMP. It contains the code points from U+0000 to U+FFFF, which are the most frequently used characters. The other sixteen planes (U+010000 → U+10FFFF) are called supplementary planes or astral planes.
 
 
- ---
-The latest version of Unicode, version 8.0, contains a repertoire of more than 120,000 characters covering 129 modern and historic scripts, as well as multiple symbol sets.
-
-Unicode can be implemented by different character encodings. The most commonly used encodings are UTF-8, UTF-16 and the now-obsolete UCS-2. UTF-8 uses one byte for any ASCII character, all of which have the same code values in both UTF-8 and ASCII encoding, and up to four bytes for other characters. UCS-2 uses a 16-bit code unit (two 8-bit bytes) for each character but cannot encode every character in the current Unicode standard. UTF-16 extends UCS-2, using one 16-bit unit for the characters that were representable in UCS-2 and two 16-bit units (4 × 8 bits) to handle each of the additional characters.
-
-
-
 
 
 ## UTF-16 Surrogate Pairs
@@ -171,7 +164,7 @@ Precomposed characters may be decomposed for consistency or analysis. For exampl
 
 
 ## Myths of Unicode
-
+*From Mark Davis's [Unicode Myths](http://macchiato.com/slides/UnicodeMyths.pdf) slides.*
 - **Unicode is simply a 16-bit code** - Some people are under the misconception that Unicode is simply a 16-bit code where each character takes 16 bits and therefore there are 65,536 possible characters. This is not, actually, correct. It is the single most common myth about Unicode, so if you thought that, don't feel bad.
 
 - **You can use any unassigned codepoint for internal use** - No. Eventually that hole will be filled with a different character. Instead use private use or noncharacters.
@@ -241,7 +234,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 | `' '`    | U+1680 OGHAM SPACE MARK                  | a space that looks like a dash. Great to bring programmers close to madness: 1 +  2 === 3.                                                                                                     |
 | `';'`    | U+037E GREEK QUESTION MARK               | a look-alike to the semicolon. Also a fun way to annoy developers.                                                                                                                             |
 | `'‭'`    | U+202D                                   | change the text direction to Left-to-Right.                                                                                                                                                    |
-| `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-Left. Relevant XKCD:                                                                                                                                     |
+| `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-XKCD:                                                                                                                                     |
 
 
 
