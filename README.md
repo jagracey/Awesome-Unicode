@@ -399,7 +399,8 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 # Awesome Packages & Libraries
 - [PhantomScript](https://github.com/jagracey/PhantomScript) - :ghost: :flashlight: Invisible JavaScript code execution & social engineering
-- [ES Reverser](https://github.com/mathiasbynens/esrever) - A Unicode-aware string reverser written in JavaScript.
+- [ESReverser](https://github.com/mathiasbynens/esrever) - A Unicode-aware string reverser written in JavaScript.
+- [mimic](https://github.com/reinderien/mimic) - [ab]using Unicode to create tragedy
 - Cool Method and Variable names?
 - Unicode and Domain Names
 
@@ -476,13 +477,13 @@ String.prototype.reverseⵑ = function(){..};
 Number.prototype.isTrueɁ = function(){..};
 
 var WhatDoesThisDoɁɁɁɁ = 42
+```
 
 
-/**
- * Variables names below are from Mathias Bynes
- * https://mathiasbynens.be/notes/javascript-identifiers#examples
- */
 
+Here are some really creative variable names from [Mathias Bynes](https://mathiasbynens.be/notes/javascript-identifiers#examples)
+
+```javascript
 // How convenient!
 var π = Math.PI;
 
@@ -519,6 +520,29 @@ var Ⅴ = 5;
 
 // Cthulhu was here
 var Hͫ̆̒̐ͣ̊̄ͯ͗͏̵̗̻̰̠̬͝ͅE̴̷̬͎̱̘͇͍̾ͦ͊͒͊̓̓̐_̫̠̱̩̭̤͈̑̎̋ͮͩ̒͑̾͋͘Ç̳͕̯̭̱̲̣̠̜͋̍O̴̦̗̯̹̼ͭ̐ͨ̊̈͘͠M̶̝̠̭̭̤̻͓͑̓̊ͣͤ̎͟͠E̢̞̮̹͍̞̳̣ͣͪ͐̈T̡̯̳̭̜̠͕͌̈́̽̿ͤ̿̅̑Ḧ̱̱̺̰̳̹̘̰́̏ͪ̂̽͂̀͠ = 'Zalgo';
+```
+
+
+And here's some [Unicode CSS Classes](https://davidwalsh.name/unicode-css-classes) from David Walsh
+```html
+<!-- place this within the document head -->
+<meta charset="UTF-8" />
+
+<!-- error message -->
+<div class="ಠ_ಠ">You do not have access to this page.</div>
+
+<!-- success message -->
+<div class="❤">Your changes have been saved successfully!</div>
+```
+
+```css
+.ಠ_ಠ {
+	border: 1px solid #f00;
+}
+
+.❤ {
+	background: lightgreen;
+}
 ```
 
 
