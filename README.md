@@ -562,6 +562,7 @@ And here's some [Unicode CSS Classes](https://davidwalsh.name/unicode-css-classe
 
 
 # Exploring Deeper into Unicode Yourself
+- [Shapecatcher](http://shapecatcher.com/) - Draw the character you're looking for.
 - [Confusable Unicode Characters](http://unicode.org/cldr/utility/confusables.jsp?r=None)
 - [Unicode Character Database](http://www.unicode.org/ucd/)
 - [Database Dumps of Codepoints.net](https://dumps.codepoints.net/)
