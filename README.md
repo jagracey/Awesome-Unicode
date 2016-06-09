@@ -29,7 +29,7 @@
 	- [Modifiers](#modifiers)
 - [Quirks and Troubleshooting](#quirks-and-troubleshooting)
 	- [List of Characters with One-To-Many Case Mappings](#list-of-characters-with-one-to-many-case-mappings)
-- [Awesome Packages & Libraries](#awesome-packages-&-libraries)
+- [Awesome Packages & Libraries](#awesome-packages--libraries)
 - [Emojis](#emojis)
 	- [Diversity](#diversity)
 - [Creatively Naming Variables and Methods](#creatively-naming-variables-and-methods)
