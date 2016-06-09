@@ -14,7 +14,6 @@
 
 ## Table of Contents
 
-- [Awesome Unicode ](#awesome-unicode)
 - [Quick Unicode Background](#quick-unicode-background)
 	- [What Characters Does the Unicode Standard Include?](#what-characters-does-the-unicode-standard-include)
 	- [Unicode Character Encodings](#unicode-character-encodings)
@@ -27,7 +26,7 @@
 	- [Source Code](#source-code)
 - [Awesome Characters List](#awesome-characters-list)
 	- [Characters](#characters)
-	- [modifiers](#modifiers)
+	- [Modifiers](#modifiers)
 - [Quirks and Troubleshooting](#quirks-and-troubleshooting)
 	- [List of Characters with One-To-Many Case Mappings](#list-of-characters-with-one-to-many-case-mappings)
 - [Awesome Packages & Libraries](#awesome-packages-&-libraries)
