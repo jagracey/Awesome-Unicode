@@ -266,11 +266,11 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
  "a⃞̈⃝"
 
 // Modifying Invisible Characters
->' \u{0308}\u{0308}\u{0308}\u{0308}\u{0308}\u{0308}\u{0308}'.toString();
-" ̈̈̈̈̈̈̈̈̈"
+> '\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}'
+ "‎‎‎‎‎‎‎‎‎‎"
 
-> " ̈̈̈̈̈̈̈".length
- 8
+> '\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}\u{200E}'.length
+ 10
 ```
 
 
