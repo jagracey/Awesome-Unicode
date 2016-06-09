@@ -219,7 +219,8 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 # Awesome Characters List
 
-## Characters
+## Special Characters
+
 
 
 | Char     | Name                                     | Description                                                                                                                                                                                    |
@@ -234,17 +235,22 @@ There are also surrogate code points, private and unassigned codepoints, and con
 | `' '`    | U+1680 OGHAM SPACE MARK                  | a space that looks like a dash. Great to bring programmers close to madness: 1 +  2 === 3.                                                                                                     |
 | `';'`    | U+037E GREEK QUESTION MARK               | a look-alike to the semicolon. Also a fun way to annoy developers.                                                                                                                             |
 | `'‭'`    | U+202D                                   | change the text direction to Left-to-Right.                                                                                                                                                    |
-| `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-XKCD:                                                                                                                                     |
+| `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-Left:                                                                                                                                     |
 
-
-
+The Unicode Consortium published a [general punctuation chart](http://www.unicode.org/charts/PDF/U2000.pdf) where you can find more details.
 
 
 <center>
 [![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
 </center>
 
-## modifiers
+## Modifiers
+
+The zero-width joiner (ZWJ) is a non-printing character used in the computerized typesetting of some complex scripts such as the Arabic script or any Indic script. When placed between two characters that would otherwise not be connected, a ZWJ causes them to be printed in their connected forms.
+
+The zero-width non-joiner (ZWNJ) is a non-printing character used in the computerization of writing systems that make use of ligatures. When placed between two characters that would otherwise be connected into a ligature, a ZWNJ causes them to be printed in their final and initial forms, respectively. This is also an effect of a space character, but a ZWNJ is used when it is desirable to keep the words closer together or to connect a word with its morpheme.
+
+
 
 ```javascript
 > 'a'
