@@ -12,7 +12,13 @@
 
 <br><br>
 
-## Table of Contents
+# Foreword
+
+Unicode is Awesome. Prior to Unicode, international communication was grueling- everyone had defined their seperate extended character sets. Thankfully the Unicode standard caught on and unified communication. It currently standardizes over 120,000 characters from over 129 scripts - some modern, some ancient, and some still undeciphered. Unicode handles left-to-right and right-to-left text, combining marks, and includes diverse cultural, political, religious characters and emojis. Unicode is awesomely human - and ultimately underappreciated.
+
+<br>
+
+# Table of Contents
 
 - [Quick Unicode Background](#quick-unicode-background)
 	- [What Characters Does the Unicode Standard Include?](#what-characters-does-the-unicode-standard-include)
