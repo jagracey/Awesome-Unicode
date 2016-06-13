@@ -14,7 +14,7 @@
 
 # Foreword
 
-Unicode is Awesome. Prior to Unicode, international communication was grueling- everyone had defined their seperate extended character sets. Thankfully the Unicode standard caught on and unified communication. It currently standardizes over 120,000 characters from over 129 scripts - some modern, some ancient, and some still undeciphered. Unicode handles left-to-right and right-to-left text, combining marks, and includes diverse cultural, political, religious characters and emojis. Unicode is awesomely human - and ultimately underappreciated.
+Unicode is Awesome. Prior to Unicode, international communication was grueling- everyone had defined their seperate extended character set in the upperhalf of ASCII (called Code Pages) that would conflict- Just think, German speakers coordinating with Korean speakers over which 127 character Code Page to use. Thankfully the Unicode standard caught on and unified communication. Unicode 8.0 standardizes over 120,000 characters from over 129 scripts - some modern, some ancient, and some still undeciphered. Unicode handles left-to-right and right-to-left text, combining marks, and includes diverse cultural, political, religious characters and emojis. Unicode is awesomely human - and ultimately underappreciated.
 
 <br>
 
@@ -419,8 +419,8 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 - [PhantomScript](https://github.com/jagracey/PhantomScript) - :ghost: :flashlight: Invisible JavaScript code execution & social engineering
 - [ESReverser](https://github.com/mathiasbynens/esrever) - A Unicode-aware string reverser written in JavaScript.
 - [mimic](https://github.com/reinderien/mimic) - [ab]using Unicode to create tragedy
-- Cool Method and Variable names?
-- Unicode and Domain Names
+- [python-ftfy](https://github.com/LuminosoInsight/python-ftfy) - Given Unicode text, make its representation consistent and possibly less broken.
+- [vim-troll-stopper](https://github.com/vim-utils/vim-troll-stopper) - Stop Unicode trolls from messing with your code.
 
 
 # Emojis
