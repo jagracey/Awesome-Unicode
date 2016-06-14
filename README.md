@@ -291,7 +291,7 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 
 - **String length is typically determined by counting codepoints.** This means that surrogate pairs would count as two characters. Combining multiple diacritics may be stacked over the same character. `a + ̈  == ̈a   `, increasing length, while only producing a single character.
 
-- **Similarily, reversing strings often is a non-tribial task.** Again, surrogate pairs and diacritics must be reversed together. [ES Reverser](https://github.com/mathiasbynens/esrever) provides a pretty good solution.
+- **Similarily, reversing strings often is a non-trivial task.** Again, surrogate pairs and diacritics must be reversed together. [ES Reverser](https://github.com/mathiasbynens/esrever) provides a pretty good solution.
 
 - **Upper and lower case mappings are not always one-to-one.** They can also be:
   - One-to-many: (ß → SS )
