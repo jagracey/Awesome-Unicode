@@ -31,7 +31,8 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 	- [Applied Unicode Encodings](#applied-unicode-encodings)
 	- [Source Code](#source-code)
 - [Awesome Characters List](#awesome-characters-list)
-	- [Characters](#characters)
+	- [Special Characters](#special-characters)
+	- [Variable identifiers can effectively include whitespace!](#user-content-variable-identifiers-can-effectively-include-whitespace)
 	- [Modifiers](#modifiers)
 - [Quirks and Troubleshooting](#quirks-and-troubleshooting)
 	- [List of Characters with One-To-Many Case Mappings](#list-of-characters-with-one-to-many-case-mappings)
@@ -224,8 +225,16 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 # Awesome Characters List
 
+
+
+
+<center>
+[![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
+</center>
+
 ## Special Characters
 
+The Unicode Consortium published a [general punctuation chart](http://www.unicode.org/charts/PDF/U2000.pdf) where you can find more details.
 
 
 | Char     | Name                                     | Description                                                                                                                                                                                    |
@@ -241,20 +250,51 @@ There are also surrogate code points, private and unassigned codepoints, and con
 | `';'`    | U+037E GREEK QUESTION MARK               | a look-alike to the semicolon. Also a fun way to annoy developers.                                                                                                                             |
 | `'‭'`    | U+202D                                   | change the text direction to Left-to-Right.                                                                                                                                                    |
 | `'‮'`‭ ‭ | U+202E                                   | change the text direction to Right-to-Left:                                                                                                                                     |
-| `ꓸ` | U+A4F8 LISU LETTER TONE MYA TI |A lookalike for the period character. |
-| `ꓹ` | U+A4F9 LISU LETTER TONE NA PO |A lookalike for the comma character.|
-| `ꓼ` | U+A4FC LISU LETTER TONE MYA NA |A lookalike for the semi-colon character.|
-| `ꓽ` | U+A4FD LISU LETTER TONE MYA JEU|A lookalike for the colon character.|
+| `'ꓸ'` | U+A4F8 LISU LETTER TONE MYA TI |A lookalike for the period character. |
+| `'ꓹ'` | U+A4F9 LISU LETTER TONE NA PO |A lookalike for the comma character.|
+| `'ꓼ'` | U+A4FC LISU LETTER TONE MYA NA |A lookalike for the semi-colon character.|
+| `'ꓽ'` | U+A4FD LISU LETTER TONE MYA JEU|A lookalike for the colon character.|
 | `'︀︁︂︃︄︅︆︇︈︉︊︋︌︍︎️󠄀󠄁󠄂󠄃󠄄󠄅󠄆󠄇󠄈󠄉󠄊󠄋󠄌󠄍󠄎󠄏󠄐󠄑󠄒󠄓󠄔󠄕󠄖󠄗󠄘󠄙󠄚󠄛󠄜󠄝󠄞󠄟󠄠󠄡󠄢󠄣󠄤󠄥󠄦󠄧󠄨󠄩󠄪󠄫󠄬󠄭󠄮󠄯󠄰󠄱󠄲󠄳󠄴󠄵󠄶󠄷󠄸󠄹󠄺󠄻󠄼󠄽󠄾󠄿󠅀󠅁󠅂󠅃󠅄󠅅󠅆󠅇󠅈󠅉󠅊󠅋󠅌󠅍󠅎󠅏󠅐󠅑󠅒󠅓󠅔󠅕󠅖󠅗󠅘󠅙󠅚󠅛󠅜󠅝󠅞󠅟󠅠󠅡󠅢󠅣󠅤󠅥󠅦󠅧󠅨󠅩󠅪󠅫󠅬󠅭󠅮󠅯󠅰󠅱󠅲󠅳󠅴󠅵󠅶󠅷󠅸󠅹󠅺󠅻󠅼󠅽󠅾󠅿󠆀󠆁󠆂󠆃󠆄󠆅󠆆󠆇󠆈󠆉󠆊󠆋󠆌󠆍󠆎󠆏󠆐󠆑󠆒󠆓󠆔󠆕󠆖󠆗󠆘󠆙󠆚󠆛󠆜󠆝󠆞󠆟󠆠󠆡󠆢󠆣󠆤󠆥󠆦󠆧󠆨󠆩󠆪󠆫󠆬󠆭󠆮󠆯󠆰󠆱󠆲󠆳󠆴󠆵󠆶󠆷󠆸󠆹󠆺󠆻󠆼󠆽󠆾󠆿󠇀󠇁󠇂󠇃󠇄󠇅󠇆󠇇󠇈󠇉󠇊󠇋󠇌󠇍󠇎󠇏󠇐󠇑󠇒󠇓󠇔󠇕󠇖󠇗󠇘󠇙󠇚󠇛󠇜󠇝󠇞󠇟󠇠󠇡󠇢󠇣󠇤󠇥󠇦󠇧󠇨󠇩󠇪󠇫󠇬󠇭󠇮󠇯'` | **Variation Selectors** ( U+FE00 to U+FE0F & U+E0100 to U+E01EF )  | a block of 256 zero width characters that posess the ID_Continue proprerty- meaning they can be used in variable names (not the first letter). What makes these special is the fact that mouse cursors pass over them as they are combining characters - unlike most other zero width characters.|
+| `'ᅟ'` | **U+115F HANGUL CHOSEONG FILLER** | In general it produces a space. Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start|
+| `'ᅠ'`  | **U+1160 HANGUL JUNGSEONG FILLER**  | Perhaps it produces a space? Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start|
+| `'ㅤ'` | **U+3164 HANGUL FILLER** | In general it produces a space. Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start |
+<br><br>
+#### Wait a second... what did I just read?
 
 
+<br><br>
+## Variable identifiers can effectively include whitespace!
 
-The Unicode Consortium published a [general punctuation chart](http://www.unicode.org/charts/PDF/U2000.pdf) where you can find more details.
+The **U+3164 HANGUL FILLER** character displays as an advancing whitespace character. The character is rendered as completely invisible (and non advancing, i.e. "zero width"), if not explicitly [supported in rendering](http://unicode.org/faq/unsup_char.html). That means the ugly character replacement (�) symbol should never be displayed. Interestingly, U+3164 was added to Unicode in version 1.1 (1993).
+
+```javascript
+> var ᅟ = 'foo';
+undefined
+> ᅟ
+'foo'
 
 
-<center>
-[![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
-</center>
+> var ㅤ= alert;
+undefined
+> var foo = 'bar'
+undefined
+> if ( foo ===ㅤ`baz` ){} 	// alert
+undefined
+
+
+> var varㅤfooㅤ\u{A60C}ㅤπ = 'bar';
+undefined
+> varㅤfooㅤꘌㅤπ
+'bar'
+
+```
+<br>
+**NOTE:** I've tested U+3164 rendering on Ubuntu and OS X with the following: `node`, `php`, `ruby`, `python3.5`, `scala` ,`vim`, `cat`, `chrome`+`github gist`. Atom is the only system that fails by (incorrectly) displaying empty boxes. I have yet to test it out on Emacs and Sublime. From what I understand, the Unicode Consortium will not reassign or rename characters or codepoints, but may be convinced to change character properties like ID_Start/ID_Continue.
+
+
+<br>
+
+
 
 ## Modifiers
 
