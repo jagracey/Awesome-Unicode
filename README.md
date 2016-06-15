@@ -265,7 +265,9 @@ The Unicode Consortium published a [general punctuation chart](http://www.unicod
 <br><br>
 ## Variable identifiers can effectively include whitespace!
 
-The **U+3164 HANGUL FILLER** character displays as an advancing whitespace character. The character is rendered as completely invisible (and non advancing, i.e. "zero width"), if not explicitly [supported in rendering](http://unicode.org/faq/unsup_char.html). That means the ugly character replacement (�) symbol should never be displayed. Interestingly, U+3164 was added to Unicode in version 1.1 (1993).
+The **U+3164 HANGUL FILLER** character displays as an advancing whitespace character. The character is rendered as completely invisible (and non advancing, i.e. "zero width"), if not explicitly [supported in rendering](http://unicode.org/faq/unsup_char.html). That means the ugly character replacement (�) symbol should never be displayed.
+
+I'm not yet sure why U+3164 was specified to behave this way. Interestingly, U+3164 was added to Unicode in version 1.1 (1993)- so the consortium must have had a lot of time to think it through. Anyway, here are a few examples.
 
 ```javascript
 > var ᅟ = 'foo';
