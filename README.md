@@ -34,6 +34,8 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 	- [Special Characters](#special-characters)
 	- [Variable identifiers can effectively include whitespace!](#variable-identifiers-can-effectively-include-whitespace)
 	- [Modifiers](#modifiers)
+	- [Uppercase Transformation Collisions](#collision-uppercase-transformation-collisions)
+	- [Lowercase Transformation Collisions](#collision-lowercase-transformation-collisions)
 - [Quirks and Troubleshooting](#quirks-and-troubleshooting)
 	- [One-To-Many Case Mappings](#one-to-many-case-mappings)
 - [Awesome Packages & Libraries](#awesome-packages--libraries)
@@ -328,22 +330,7 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 ```
 
 
-
-# Quirks and Troubleshooting
-
-- **String length is typically determined by counting codepoints.** This means that surrogate pairs would count as two characters. Combining multiple diacritics may be stacked over the same character. `a + ̈  == ̈a   `, increasing length, while only producing a single character.
-
-- **Similarily, reversing strings often is a non-trivial task.** Again, surrogate pairs and diacritics must be reversed together. [ES Reverser](https://github.com/mathiasbynens/esrever) provides a pretty good solution.
-
-- **Upper and lower case mappings are not always one-to-one.** They can also be:
-  - One-to-many: (ß → SS )
-  - Contextual: (…Σ ↔ …ς AND …ΣΤ… ↔ …στ… )
-  - Locale-sensitive: ( I ↔ ı AND İ ↔ i )
-
-
-
-
-### :collision: Uppercase Transformation Collisions
+## :collision: Uppercase Transformation Collisions
 
 | Char | Code Point | Output Char |
 |------|------------|-------------|
@@ -358,11 +345,23 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 | ﬅ | 0xFB05 | `ST` |
 | ﬆ | 0xFB06 | `ST` |
 
-### :collision: Lowercase Transformation Collisions
+## :collision: Lowercase Transformation Collisions
 | Char | Code Point | Output Char |
 |------|------------|-------------|
 | K | 0x212A | `k` |
 
+
+
+# Quirks and Troubleshooting
+
+- **String length is typically determined by counting codepoints.** This means that surrogate pairs would count as two characters. Combining multiple diacritics may be stacked over the same character. `a + ̈  == ̈a   `, increasing length, while only producing a single character.
+
+- **Similarily, reversing strings often is a non-trivial task.** Again, surrogate pairs and diacritics must be reversed together. [ES Reverser](https://github.com/mathiasbynens/esrever) provides a pretty good solution.
+
+- **Upper and lower case mappings are not always one-to-one.** They can also be:
+  - One-to-many: (ß → SS )
+  - Contextual: (…Σ ↔ …ς AND …ΣΤ… ↔ …στ… )
+  - Locale-sensitive: ( I ↔ ı AND İ ↔ i )
 
 
 
