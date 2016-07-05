@@ -32,10 +32,10 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 	- [Source Code](#source-code)
 - [Awesome Characters List](#awesome-characters-list)
 	- [Special Characters](#special-characters)
-	- [Variable identifiers can effectively include whitespace!](#user-content-variable-identifiers-can-effectively-include-whitespace)
+	- [Variable identifiers can effectively include whitespace!](#variable-identifiers-can-effectively-include-whitespace)
 	- [Modifiers](#modifiers)
 - [Quirks and Troubleshooting](#quirks-and-troubleshooting)
-	- [List of Characters with One-To-Many Case Mappings](#list-of-characters-with-one-to-many-case-mappings)
+	- [One-To-Many Case Mappings](#one-to-many-case-mappings)
 - [Awesome Packages & Libraries](#awesome-packages--libraries)
 - [Emojis](#emojis)
 	- [Diversity](#diversity)
@@ -59,7 +59,7 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 
 The Unicode Standard defines codes for characters used in all the major languages written today. Scripts include the European alphabetic scripts, Middle Eastern right-to-left scripts, and many scripts of Asia.
 
-The Unicode Standard further includes punctuation marks, diacritics, mathematical symbols, technical symbols, arrows, dingbats, emoji, etc. It provides codes for diacritics, which are modifying character marks such as the tilde (~), that are used in conjunction with base characters to represent accented letters (ñ, for example). In all, the Unicode Standard, Version 8.0 provides codes for 120,672 characters from the world's alphabets, ideograph sets, and symbol collections.
+The Unicode Standard further includes punctuation marks, diacritics, mathematical symbols, technical symbols, arrows, dingbats, emoji, etc. It provides codes for diacritics, which are modifying character marks such as the tilde (~), that are used in conjunction with base characters to represent accented letters (ñ, for example). In all, the Unicode Standard, Version 9.0 provides codes for 128,172 characters from the world's alphabets, ideograph sets, and symbol collections.
 
 The majority of common-use characters fit into the first 64K code points, an area of the codespace that is called the basic multilingual plane, or BMP for short. There are sixteen other supplementary planes available for encoding other characters, with currently over 850,000 unused code points. More characters are under consideration for addition to future versions of the standard.
 
@@ -343,8 +343,35 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 
 
 
-## List of Characters with One-To-Many Case Mappings
-*Most of the below characters express their one-to-many mappings when uppercased.*
+### :collision: Uppercase Transformation Collisions
+
+| Char | Code Point | Output Char |
+|------|------------|-------------|
+| ß | 0x00DF | `SS` |
+| ı | 0x0131 | `I`  |
+| ſ | 0x017F | `S`  |
+| ﬀ | 0xFB00 | `FF` |
+| ﬁ | 0xFB01 | `FI` |
+| ﬂ | 0xFB02 | `FL` |
+| ﬃ | 0xFB03 | `FFI`|
+| ﬄ | 0xFB04 | `FFL`|
+| ﬅ | 0xFB05 | `ST` |
+| ﬆ | 0xFB06 | `ST` |
+
+### :collision: Lowercase Transformation Collisions
+| Char | Code Point | Output Char |
+|------|------------|-------------|
+| K | 0x212A | `k` |
+
+
+
+
+### One-To-Many Case Mappings
+*Most of the below characters express their one-to-many case mappings when uppercased- while others should be lowercased. This list should be split up*
+
+
+
+
 
 | Code Point                                      | Character | Name                                                                     | Mapped Character | Mapped Code Points     |
 |-------------------------------------------------|-----------|--------------------------------------------------------------------------|------------------|------------------------|
@@ -936,7 +963,9 @@ Note: Principle descriptions are from [codepoints.net](https://codepoints.net/ab
 
 
 # Unicode Versions
-* [Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) (Latest Version as of 01/01/2016)
+
+* [Version 9.0.0](http://www.unicode.org/versions/Unicode9.0.0/) (Latest Version, August 2016 - adds exactly 7,500 characters)
+* [Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)
 * [Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/)
 * [Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)
 * [Version 6.2.0](http://www.unicode.org/versions/Unicode6.2.0/)
