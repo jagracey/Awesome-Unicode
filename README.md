@@ -636,7 +636,7 @@ And here's some [Unicode CSS Classes](https://davidwalsh.name/unicode-css-classe
 If you want to rename all your HTML tags to what appears as nothing, the following script is just what your looking for.
 
 *Do note however that HTML does not support all unicode characters.*
-```
+```javascript
 // U+1160 HANGUL JUNGSEONG FILLER
 transformAllTags('ᅠ');
 
@@ -677,7 +677,7 @@ function transformTag(tagIdOrElem, tagType){
 ```
 Here is what it does support:
 
-```
+```javascript
 function testBegin(str){
  try{
     eval(`document.createElement( '${str}' );`)
@@ -696,14 +696,16 @@ function testContinue(str){
 ```
 
 And heres some basic results
-```
+```javascript
 // Test if dashes can start an HTML Tag
 > testBegin('-')
 < false
+
 > testContinue('-')
 < true
 
-
+> testBegin('ᅠ-')	// Prepend dash with U+1160 HANGUL JUNGSEONG FILLER
+< true
 ```
 
 
