@@ -640,6 +640,10 @@ If you want to rename all your HTML tags to what appears as nothing, the followi
 // U+1160 HANGUL JUNGSEONG FILLER
 transformAllTags('ᅠ');
 
+// An actual HTML element node designed to look like a comment node, using the U+01C3 LATIN LETTER RETROFLEX CLICK 
+//	<ǃ-- name="viewport" content="width=device-width"></ǃ-->
+transformAllTags('ǃ--');
+
 // or even <ᅠ⃝
 transformAllTags('\u{1160}\u{20dd}');
 
