@@ -42,6 +42,7 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 - [Emojis](#emojis)
 	- [Diversity](#diversity)
 - [Creatively Naming Variables and Methods](#creatively-naming-variables-and-methods)
+	- [Recursive HTML Tag Renaming Script](#recursive-html-tag-renaming-script)
 - [Unicode Fonts](#unicode-fonts)
 - [More Reading](#more-reading)
 - [Exploring Deeper into Unicode Yourself](#exploring-deeper-into-unicode-yourself)
@@ -256,7 +257,7 @@ The Unicode Consortium published a [general punctuation chart](http://www.unicod
 | `'ꓹ'` | U+A4F9 LISU LETTER TONE NA PO |A lookalike for the comma character.|
 | `'ꓼ'` | U+A4FC LISU LETTER TONE MYA NA |A lookalike for the semi-colon character.|
 | `'ꓽ'` | U+A4FD LISU LETTER TONE MYA JEU|A lookalike for the colon character.|
-| `'︀︁︂︃︄︅︆︇︈︉︊︋︌︍︎️󠄀󠄁󠄂󠄃󠄄󠄅󠄆󠄇󠄈󠄉󠄊󠄋󠄌󠄍󠄎󠄏󠄐󠄑󠄒󠄓󠄔󠄕󠄖󠄗󠄘󠄙󠄚󠄛󠄜󠄝󠄞󠄟󠄠󠄡󠄢󠄣󠄤󠄥󠄦󠄧󠄨󠄩󠄪󠄫󠄬󠄭󠄮󠄯󠄰󠄱󠄲󠄳󠄴󠄵󠄶󠄷󠄸󠄹󠄺󠄻󠄼󠄽󠄾󠄿󠅀󠅁󠅂󠅃󠅄󠅅󠅆󠅇󠅈󠅉󠅊󠅋󠅌󠅍󠅎󠅏󠅐󠅑󠅒󠅓󠅔󠅕󠅖󠅗󠅘󠅙󠅚󠅛󠅜󠅝󠅞󠅟󠅠󠅡󠅢󠅣󠅤󠅥󠅦󠅧󠅨󠅩󠅪󠅫󠅬󠅭󠅮󠅯󠅰󠅱󠅲󠅳󠅴󠅵󠅶󠅷󠅸󠅹󠅺󠅻󠅼󠅽󠅾󠅿󠆀󠆁󠆂󠆃󠆄󠆅󠆆󠆇󠆈󠆉󠆊󠆋󠆌󠆍󠆎󠆏󠆐󠆑󠆒󠆓󠆔󠆕󠆖󠆗󠆘󠆙󠆚󠆛󠆜󠆝󠆞󠆟󠆠󠆡󠆢󠆣󠆤󠆥󠆦󠆧󠆨󠆩󠆪󠆫󠆬󠆭󠆮󠆯󠆰󠆱󠆲󠆳󠆴󠆵󠆶󠆷󠆸󠆹󠆺󠆻󠆼󠆽󠆾󠆿󠇀󠇁󠇂󠇃󠇄󠇅󠇆󠇇󠇈󠇉󠇊󠇋󠇌󠇍󠇎󠇏󠇐󠇑󠇒󠇓󠇔󠇕󠇖󠇗󠇘󠇙󠇚󠇛󠇜󠇝󠇞󠇟󠇠󠇡󠇢󠇣󠇤󠇥󠇦󠇧󠇨󠇩󠇪󠇫󠇬󠇭󠇮󠇯'` | **Variation Selectors** ( U+FE00 to U+FE0F & U+E0100 to U+E01EF )  | a block of 256 zero width characters that posess the ID_Continue proprerty- meaning they can be used in variable names (not the first letter). What makes these special is the fact that mouse cursors pass over them as they are combining characters - unlike most other zero width characters.|
+| `'︀'` | **Variation Selectors** ( U+FE00 to U+FE0F & U+E0100 to U+E01EF )  | a block of 256 zero width characters that posess the ID_Continue proprerty- meaning they can be used in variable names (not the first letter). What makes these special is the fact that mouse cursors pass over them as they are combining characters - unlike most other zero width characters.|
 | `'ᅟ'` | **U+115F HANGUL CHOSEONG FILLER** | In general it produces a space. Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start|
 | `'ᅠ'`  | **U+1160 HANGUL JUNGSEONG FILLER**  | Perhaps it produces a space? Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start|
 | `'ㅤ'` | **U+3164 HANGUL FILLER** | In general it produces a space. Rendered as zero width (invisible) if not explicitly supported in rendering. Designated ID_Start |
@@ -631,6 +632,79 @@ And here's some [Unicode CSS Classes](https://davidwalsh.name/unicode-css-classe
 }
 ```
 
+## Recursive HTML Tag Renaming Script
+If you want to rename all your HTML tags to what appears as nothing, the following script is just what your looking for.
+
+*Do note however that HTML does not support all unicode characters.*
+```
+// U+1160 HANGUL JUNGSEONG FILLER
+transformAllTags('ᅠ');
+
+// or even <ᅠ⃝
+transformAllTags('\u{1160}\u{20dd}');
+
+// and for a bonus, all existing tag names will have each character ensquared. h⃞t⃞m⃞l⃞
+transformAllTags();
+
+
+function transformAllTags (newName){
+   // querySelectorAll doesn't actually return an array.
+   Array.from(document.querySelectorAll('*'))
+     .forEach(function(x){
+         transformTag(x, newName);
+   });
+}
+
+function wonky(str){
+  return str.split('').join('\u{20de}') + '\u{20de}';
+}
+
+function transformTag(tagIdOrElem, tagType){
+    var elem = (tagIdOrElem instanceof HTMLElement) ? tagIdOrElem : document.getElementById(tagIdOrElem);
+    if(!elem || !(elem instanceof HTMLElement))return;
+    var children = elem.childNodes;
+    var parent = elem.parentNode;
+    var newNode = document.createElement(tagType||wonky(elem.tagName));
+    for(var a=0;a<elem.attributes.length;a++){
+        newNode.setAttribute(elem.attributes[a].nodeName, elem.attributes[a].value);
+    }
+    for(var i= 0,clen=children.length;i<clen;i++){
+        newNode.appendChild(children[0]); //0...always point to the first non-moved element
+    }
+    newNode.style.cssText = elem.style.cssText;
+    parent.replaceChild(newNode,elem);
+}
+```
+Here is what it does support:
+
+```
+function testBegin(str){
+ try{
+    eval(`document.createElement( '${str}' );`)
+    return true;
+ }
+ catch(e){ return false; }
+}
+
+function testContinue(str){
+ try{
+    eval(`document.createElement( 'a${str}' );`)
+    return true;
+ }
+ catch(e){ return false; }
+}
+```
+
+And heres some basic results
+```
+// Test if dashes can start an HTML Tag
+> testBegin('-')
+< false
+> testContinue('-')
+< true
+
+
+```
 
 
 # Unicode Fonts
