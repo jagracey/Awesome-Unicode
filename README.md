@@ -18,7 +18,7 @@ Unicode is Awesome. Prior to Unicode, international communication was grueling- 
 
 <br>
 
-# Table of Contents
+# Contents
 
 - [Quick Unicode Background](#quick-unicode-background)
 	- [What Characters Does the Unicode Standard Include?](#what-characters-does-the-unicode-standard-include)
