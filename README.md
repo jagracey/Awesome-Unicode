@@ -133,7 +133,7 @@ Forms.) -- [Unicode 8.0.0 Chapter 3 - Surrogates](http://unicode.org/versions/Un
 
 ## Calculating Surrogate Pairs
 
-The Unicode character **💩 Pile of Poo (U+1F4A9)** in UTF-16 must be encoded as two surrogate pairs. To convert any code point to a surrogate pair, use the following algorithm (in JavaScript). Keep in mind that we're dealing with Hexidecimal.
+The Unicode character **💩 Pile of Poo (U+1F4A9)** in UTF-16 must be encoded as a surrogate pair, i.e. two surrogates. To convert any code point to a surrogate pair, use the following algorithm (in JavaScript). Keep in mind that we're using hexidecimal notation.
 
 ```javascript
  var High_Surrogate = function(Code_Point){ return Math.floor((Code_Point - 0x10000) / 0x400) + 0xD800 };
@@ -141,7 +141,7 @@ The Unicode character **💩 Pile of Poo (U+1F4A9)** in UTF-16 must be encoded a
 
  // Reverses The Conversion
  var Code_Point = function(High_Surrogate, Low_Surrogate){
-	return (High_Surrogate - 0xD800) * 0x400 + Low_Surrogate - 0xDC00 + 0x10000
+	return (High_Surrogate - 0xD800) * 0x400 + Low_Surrogate - 0xDC00 + 0x10000;
  };
 ```
 
@@ -154,7 +154,7 @@ The Unicode character **💩 Pile of Poo (U+1F4A9)** in UTF-16 must be encoded a
 
  > String.fromCharCode(  High_Surrogate(codepoint) , Low_Surrogate(codepoint) );
   "💩"
-> String.fromCodePoint(128169)
+> String.fromCodePoint(0x1F4A9)
   "💩"
  > '\ud83d\udca9'
   "💩"
