@@ -211,14 +211,15 @@ There are also surrogate code points, private and unassigned codepoints, and con
 ## Source Code
 |Encoding Type| Raw Encoding|
 |-------------|-------------|
-| JavaScript  | \u1F596 	|
-| JSON 	 	  | \u1F596 	|
+| JavaScript  | \uD83D\uDD96	|
+| JSON 	 	  | \uD83D\uDD96	|
 | C 		  | \u1F596 	|
 | C++ 		  | \u1F596 	|
-| Java		  | \u1F596		|
-| Python	  | \u1F596 	|
+| Java		  | \uD83D\uDD96	|
+| Python	  | \U0001F596 	|
 | Perl		  | \x{1F596}	|
 | Ruby		  | \u{1F596}	|
+| Rust		  | \u{1F596}	|
 | CSS		  | \01F596 	|
 
 
