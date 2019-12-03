@@ -10,6 +10,8 @@
 *Please read the [contribution guidelines](CONTRIBUTING.md) before contributing.*
 *Key Unicode terminology is defined in the [glossary](GLOSSARY.md).*
 
+*Cross posted to [Wisdom's Dev Blog](https://wisdom.engineering/awesome-unicode/)*
+
 <br><br>
 
 # Foreword
