@@ -1046,18 +1046,21 @@ Note: Principle descriptions are from [codepoints.net](https://codepoints.net/ab
 
 # Unicode Versions
 
-* [Version 9.0.0](http://www.unicode.org/versions/Unicode9.0.0/) (Latest Version, August 2016 - adds exactly 7,500 characters)
-* [Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)
-* [Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/)
-* [Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/)
-* [Version 6.2.0](http://www.unicode.org/versions/Unicode6.2.0/)
-* [Version 6.1.0](http://www.unicode.org/versions/Unicode6.1.0/)
-* [Version 6.0.0](http://www.unicode.org/versions/Unicode6.0.0/)
-* [Version 5.2.0](http://www.unicode.org/versions/Unicode5.2.0/)
-* [Version 5.1.0](http://www.unicode.org/versions/Unicode5.1.0/)
-* Version 5.0.0 (unavailable)
-* [Version 4.0.1](http://www.unicode.org/versions/Unicode4.0.1/)
-* [Version 4.0.0](http://www.unicode.org/versions/corrigendum5.html)
+* [Version 12.0.0](http://www.unicode.org/versions/Unicode12.0.0/) - 2019
+* [Version 11.0.0](http://www.unicode.org/versions/Unicode11.0.0/) - 2018
+* [Version 10.0.0](http://www.unicode.org/versions/Unicode10.0.0/) - 2017
+* [Version 9.0.0](http://www.unicode.org/versions/Unicode9.0.0/) - 2016
+* [Version 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/) - 2015
+* [Version 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/) - 2014
+* [Version 6.3.0](http://www.unicode.org/versions/Unicode6.3.0/) - 2013
+* [Version 6.2.0](http://www.unicode.org/versions/Unicode6.2.0/) - 2012
+* [Version 6.1.0](http://www.unicode.org/versions/Unicode6.1.0/) - 2012
+* [Version 6.0.0](http://www.unicode.org/versions/Unicode6.0.0/) - 2011
+* [Version 5.2.0](http://www.unicode.org/versions/Unicode5.2.0/) - 2009
+* [Version 5.1.0](http://www.unicode.org/versions/Unicode5.1.0/) - 2007
+* Version 5.0.0 (unavailable) - 2007
+* [Version 4.0.1](http://www.unicode.org/versions/Unicode4.0.1/) - 2003
+* [Version 4.0.0](http://www.unicode.org/versions/corrigendum5.html) - 2003
 
 
 
