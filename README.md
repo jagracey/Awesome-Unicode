@@ -234,7 +234,9 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 
 <center>
-[![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
+	
+[![](http://imgs.xkcd.com/comics/rtl.png)](https://xkcd.com/1137/)
+
 </center>
 
 ## Special Characters
