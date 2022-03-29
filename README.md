@@ -230,12 +230,7 @@ There are also surrogate code points, private and unassigned codepoints, and con
 
 # Awesome Characters List
 
-
-
-
-<center>
-[![](http://imgs.xkcd.com/comics/rtl.png )](https://xkcd.com/1137/)
-</center>
+[![](http://imgs.xkcd.com/comics/rtl.png)](https://xkcd.com/1137/)
 
 ## Special Characters
 
