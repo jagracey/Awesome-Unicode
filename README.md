@@ -724,6 +724,7 @@ And heres some basic results
 # More Reading
 * [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets](http://www.joelonsoftware.com/articles/Unicode.html) - By Joel Spolsky
 * [What Every Programmer Absolutely, Positively Needs To Know About Encodings And Character Sets To Work With Text](http://kunststube.net/encoding/)
+* [QR9 Unicode Escape Converter](https://qr9.net/en/unicode) - Encode and decode Unicode escape strings for JSON, JavaScript, CJK text, and emoji debugging.
 * [The Unicode Consortium's Recommended Reading List](http://www.unicode.org/resources/readinglist.html)
 * [Space Yourself](https://www.smashingmagazine.com/2015/10/space-yourself/) - Smashing Magazine's Spacing Guide
 * [JavaScript has a Unicode Problem](https://mathiasbynens.be/notes/javascript-unicode)
