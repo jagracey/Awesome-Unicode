@@ -492,6 +492,7 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 - [mimic](https://github.com/reinderien/mimic) - [ab]using Unicode to create tragedy
 - [python-ftfy](https://github.com/LuminosoInsight/python-ftfy) - Given Unicode text, make its representation consistent and possibly less broken.
 - [vim-troll-stopper](https://github.com/vim-utils/vim-troll-stopper) - Stop Unicode trolls from messing with your code.
+-  [AI Fonts Generator](https://aifontsgenerator.com) - A free web tool that converts text into 168+ Unicode font styles for use in usernames, bios, and messages.
 
 
 # Emojis
