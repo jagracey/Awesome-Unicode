@@ -174,6 +174,8 @@ Certain sequences of characters can also be represented as a single character, c
 Precomposed characters may be decomposed for consistency or analysis. For example, in alphabetizing (collating) a list of names, the character "ü" may be decomposed into a "u" followed by the non-spacing character "¨". Once the character has been decomposed, it may be easier for the collation to work with the character because it can be processed as a "u" with modifications. This allows easier alphabetical sorting for languages where character modifiers do not affect alphabetical order. The Unicode Standard defines the [decompositions](http://unicode.org/versions/Unicode8.0.0/ch03.pdf#page=44) for all precomposed characters. It also defines normalization forms to provide for unique representations of characters.
 
 
+Related practical example: [24 Unicode character-count fixtures](https://chatcument.com/research/unicode-character-count.html) — Compare UTF-16 units, code points, grapheme clusters and UTF-8 bytes for Korean, combining marks and emoji, with reusable data and a reproduction script.
+
 ## Myths of Unicode
 *From Mark Davis's [Unicode Myths](http://macchiato.com/slides/UnicodeMyths.pdf) slides.*
 - **Unicode is simply a 16-bit code** - Some people are under the misconception that Unicode is simply a 16-bit code where each character takes 16 bits and therefore there are 65,536 possible characters. This is not, actually, correct. It is the single most common myth about Unicode, so if you thought that, don't feel bad.
