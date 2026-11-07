@@ -731,6 +731,7 @@ And heres some basic results
 
 
 # Exploring Deeper into Unicode Yourself
+- [ASCII Images Unicode Inspector](https://ascii-images.com/unicode-inspector) - Inspect code points, UTF-16 offsets and invisible characters in pasted text.
 - [Shapecatcher](http://shapecatcher.com/) - Draw the character you're looking for.
 - [Confusable Unicode Characters](http://unicode.org/cldr/utility/confusables.jsp?r=None)
 - [Unicode Character Database](http://www.unicode.org/ucd/)
