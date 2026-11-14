@@ -498,6 +498,7 @@ The zero-width non-joiner (ZWNJ) is a non-printing character used in the compute
 * [Unicode Consortium's Emoji Chart](http://www.unicode.org/emoji/charts/full-emoji-list.html)
 * [Emojipedia](http://emojipedia.org/) - Information about specific emoji, news blog.
 * [emojitracker](http://emojitracker.com/) - Realtime emoji use on Twitter.
+* [EmojiMagic](https://emojimagic.io/) - Search emojis by description, mix two emojis into a new one, and export transparent PNGs (free, no signup).
 * [World Translation Foundation](http://www.emojifoundation.com/) - A way to promote, explore, and translate the written word into the pictorial alphabet of Emoji.
 * [Can I Emoji?](http://caniemoji.com/android-2/) - Displays the current status of native Emoji support across iOS, Android and Windows.
 * [How to register an emoji URL](http://www.name.com/blog/how-tos/2015/12/want-an-emoji-url-this-is-how-you-register-one/)
